@@ -1,0 +1,255 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0811b8f1-b852-400b-900c-807571ca03f6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "2fa44adb-bbe7-470d-a58f-95c570072d0a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Orignal list of tuples:\n",
+      "[('Sachin tendulkar', 34357), ('Ricky ponting', 27483), ('Jack kallis', 25534), ('Virat kohli', 24936)]\n",
+      "\n",
+      "Sorting the list of Tuples:\n",
+      "[('Virat kohli', 24936), ('Jack kallis', 25534), ('Ricky ponting', 27483), ('Sachin tendulkar', 34357)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "Player_scores = [(\"Sachin tendulkar\",34357), (\"Ricky ponting\",27483) ,(\"Jack kallis\",25534) ,(\"Virat kohli\" ,24936)]\n",
+    "print(\"Orignal list of tuples:\")\n",
+    "print(Player_scores)\n",
+    "Player_scores.sort(key = lambda x: x[1])\n",
+    "print(\"\\nSorting the list of Tuples:\")\n",
+    "print(Player_scores)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "79b60929-33fe-4843-9c6f-02c9c6ceb8f6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "76099d9a-6813-414a-8d30-fee0c178ab10",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original list of nums:\n",
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+      "\n",
+      "Square of every element said in list nums:\n",
+      "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "nums = [1,2,3,4,5,6,7,8,9,10,]\n",
+    "print(\"Original list of nums:\")\n",
+    "print(nums)\n",
+    "print(\"\\nSquare of every element said in list nums:\")\n",
+    "square_num = list(map(lambda x : x ** 2, nums))\n",
+    "print(square_num)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "909cb9e3-9d09-42e9-adfc-b702c9318cfe",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "b4c56558-7fe1-4ed0-b051-7e114b933dc0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original num list:\n",
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+      "\n",
+      "Tuple of string:\n",
+      "('1', '2', '3', '4', '5', '6', '7', '8', '9', '10')\n"
+     ]
+    }
+   ],
+   "source": [
+    "list = [1,2,3,4,5,6,7,8,9,10]\n",
+    "print(\"Original num list:\")\n",
+    "print(list)\n",
+    "result_tuples = tuple(map(lambda x : str(x) ,list))\n",
+    "print(\"\\nTuple of string:\")\n",
+    "print(result_tuples)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "971c3713-8514-458f-9dc0-041efd27f6ac",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "d60fc013-f3a1-461e-91e2-502c3bec5ff0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]\n",
+      "The product of elements of list:15511210043330985984000000\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Importing a library for reduce() function \n",
+    "import functools \n",
+    "list = []\n",
+    "for i in range(1,26):\n",
+    "    list.append(i)\n",
+    "print(list)\n",
+    "print(\"The product of elements of list:\" , end = \"\")\n",
+    "print(functools.reduce(lambda a ,b :a * b , list))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "d676f3a3-4afe-4dfc-9cb1-6e36fe824ad2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "83b81335-140c-4d39-9718-29b5ecba347e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original elements of nums_lis:\n",
+      "[2, 3, 6, 9, 27, 60, 90, 120, 55, 46]\n",
+      "\n",
+      "list of num which div by 2 & 3:\n",
+      "[2, 3, 6, 9, 27, 60, 90, 120, 46]\n"
+     ]
+    }
+   ],
+   "source": [
+    "nums_lis = [2, 3, 6, 9, 27, 60, 90, 120, 55, 46]\n",
+    "print(\"Original elements of nums_lis:\")\n",
+    "print(nums_lis)\n",
+    "print(\"\\nlist of num which div by 2 & 3:\")\n",
+    "num_div = filter (lambda x : (x%2 & x%3 == 0) ,nums_lis)\n",
+    "num_div =list(num_div)\n",
+    "print(num_div)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "1ea2604a-5ae8-40ae-916a-4fbfcebba828",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q6"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "88aea938-ba74-426a-a594-207742b83e69",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Orginal list of strings:\n",
+      "['python', 'php', 'aba', 'radar', 'level']\n",
+      "\n",
+      "List of palindromes:\n",
+      "['php', 'aba', 'radar', 'level']\n"
+     ]
+    }
+   ],
+   "source": [
+    "texts = ['python', 'php', 'aba', 'radar', 'level']\n",
+    "print(\"Orginal list of strings:\")\n",
+    "print(texts) \n",
+    "result = list(filter(lambda x: (x == \"\".join(reversed(x))), texts)) \n",
+    "print(\"\\nList of palindromes:\")\n",
+    "print(result) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3cefea9b-fd10-4f22-a04d-fd5cd3bb3629",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
